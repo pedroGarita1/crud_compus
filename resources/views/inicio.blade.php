@@ -14,9 +14,9 @@
                     <div class="card-body">
                         <h5 class="card-title text-center fs-3">Lista de Computadoras</h5>
                         <p class="card-text">
-                            <table class="table table-hover table-condensed table-responsive table-dark">
+                            <table id="myTable" class="table table-hover table-condensed table-responsive table-dark" width="100%">
                                 <thead>
-                                    <tr>
+                                    <tr class="text-center">
                                         <th scope="col">Nombre</th>
                                         <th scope="col">Marca</th>
                                         <th scope="col">Modelo</th>
@@ -25,6 +25,7 @@
                                         <th scope="col">Disco Duro</th>
                                         <th scope="col">Descripcion</th>
                                         <th scope="col">URL de imagen</th>
+                                        <th scope="col">Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -33,11 +34,21 @@
                                         <td>{{ $item->nombre }}</td>
                                         <td>{{ $item->marca }}</td>
                                         <td>{{ $item->modelo }}</td>
-                                        <td>{{ $item->ram }}</td>
+                                        <td>{{ $item->ram }} GB</td>
                                         <td>{{ $item->procesador }}</td>
                                         <td>{{ $item->discoduro }}</td>
                                         <td>{{ $item->descripcion }}</td>
+                                        @if ($item->url_image == 'Sin URL')
                                         <td>{{ $item->url_image }}</td>
+                                        @else
+                                        <td><img src="{{ $item->url_image }}" class="img-thumbnail img-fluid" style="width: 100px;" alt="..."></td>
+                                        @endif
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <a href="{{ route('view-edit', ['id'=>$item->id]) }}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                                                <a href="{{ route('view-delete', ['id'=>$item->id]) }}" class="btn btn-danger"><i class="fa-solid fa-delete-left"></i></a>
+                                            </div>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
