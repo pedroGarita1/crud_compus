@@ -1,14 +1,16 @@
 @extends('layouts/main')
 @section('contenido')
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="text-content-3">Eliminar Registro</h1>
+            </div>
             <div class="col-md-12">
-                <div class="col-md-12 mt-3">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center fs-3">Eliminar Computadora</h5>
                             <p class="card-text">
-                                <table id="myTable" class="table table-hover table-condensed table-responsive table-danger" width="100%">
+                                <table id="myTable" class="table table-hover table-condensed table-responsive table-negro" width="100%">
                                     <thead>
                                         <tr class="text-center">
                                             <th scope="col">Nombre</th>

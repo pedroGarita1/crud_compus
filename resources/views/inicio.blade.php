@@ -9,12 +9,14 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12 text-center">
+                <h1 class="text-content-1">Listado de computadoras</h1>
+            </div>
             <div class="col-md-12 mt-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title text-center fs-3">Lista de Computadoras</h5>
                         <p class="card-text">
-                            <table id="myTable" class="table table-hover table-condensed table-responsive table-dark" width="100%">
+                            <table id="myTable" class="table table-condensed table-responsive table-negro" width="100%">
                                 <thead>
                                     <tr class="text-center">
                                         <th scope="col">Nombre</th>
